@@ -1,0 +1,146 @@
+/*
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    float arreglo[10];
+    int pos=0, neg=0, cero=0;
+    printf("Serie de 10 numeros \n");
+    for (int i = 0; i < 10; i++) {
+        printf("Digite numero %d : " , (i+1));
+        scanf("%f",&arreglo[i]);
+    }
+    for (int i = 0; i < 10; i++) {
+        if(arreglo[i]>0){
+            pos++;
+        }
+        else if(arreglo[i]<0){
+            neg++;
+        }else{
+            cero++;
+        }
+    }
+    printf("Nros positivos: %d\n" ,pos);
+    printf("Nros negativos: %d\n" ,neg);
+    printf("Nros ceros: %d\n" ,cero);
+}
+
+
+*/
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    //Declaracion del arreglo y variables
+    int arreglo[5];
+    //Declaracion de acumuladores
+    int total=0, auxmayor=0, auxmenor=0;
+
+    //Lectura de los elementos del arreglo
+    printf("Serie de 5 numeros: \n");
+    for (int i = 0; i < 5; i++) {
+        printf("NUMERO %d :", (i+1));
+        scanf("%d",&arreglo[i]);
+        //si el numero es mayor al acumulador aux, este toma su valor
+        if(auxmenor>arreglo[i]){
+            auxmenor=arreglo[i];
+        }
+        //si el numero es menor al acumulador aux, este toma su valor
+        if(auxmayor<arreglo[i]){
+            auxmayor=arreglo[i];
+        }
+        //acumulador para promediar notas
+        total+=arreglo[i];
+    }
+
+    printf("Nro menor: %d\n" ,auxmenor);
+    printf("Nro mayor: %d\n" ,auxmayor);
+    printf("Promedio: %d\n" ,(total/5));
+    printf("Numeracion en orden:\n");
+    int aux=0;
+    //Burbuja
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            if(arreglo[j]>arreglo[j+1]){
+                aux=arreglo[j];
+
+                arreglo[j]=arreglo[j+1];
+                arreglo[j+1]=aux;
+            }
+        }
+    }
+    for (int i = 0; i < 5; i++) {
+        printf("%d ",arreglo[i]);
+    }
+}
+
+
+
+
+
+
+
+/*
+arreglos 1
+#include <stdio.h>
+#include <conio.h>
+
+main(){
+int contador=0;
+float arreglo[5];
+for(contador=0; contador<=4; contador++){
+printf("Introduce el valor de la celda[%d]: ",contador); //Salida en pantalla
+
+scanf("%f", &arreglo[contador]); //Entrada manual
+
+}
+
+int contador2=0;
+for(contador2=0;contador2<=4;contador2++){
+printf("Valor de la celda[%d]: %.1fn",arreglo[contador2]); //Salida en pantalla.
+}
+}
+*/
+
+
+
+/*
+ arreglo 2.1
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+            int x,tabla[10];
+            int sum;
+
+            for (x=0;x<5;x++)
+            {
+                
+        printf("Introduzca número\n");
+        scanf("%d",&tabla[x]);
+    }
+
+            sum=tabla[0];
+
+            for (x=1;x<5;x++)
+            {
+        sum=sum+tabla[x];
+    }
+
+            printf("Suma: %d\n",sum);
+            printf("promedio:",(sum/5));
+
+
+}
+
+*/
