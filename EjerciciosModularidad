@@ -1,0 +1,123 @@
+/*
+
+//EJERCICIO 1
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+double FactorialDo(int );
+double FactorialWhile(int );
+double FactorialFor(int );
+int FactorialRecursivo(int );
+
+
+int main()
+{
+    int nro;
+    printf("Ingress numerous: ");
+    scanf("%d",&nro);
+    double fact = FactorialRecursivo(   nro);
+    printf("El factorial es: %lf",fact);
+    return 0;
+}
+
+double FactorialDo(int nro){
+    double fact = 1;
+    int i=1;
+    do{
+        fact = fact * i;
+        i++;
+    }
+    while(i<=nro);
+    return fact;
+}
+
+double FactorialWhile(int nro){
+        double fact = 1;
+        int i=1;
+        while(i<=nro){
+            fact = fact * i;
+            i++;
+        }
+        return fact;
+    }
+
+
+
+double FactorialFor(int nro){
+    double fact = 1;
+    int i=1;
+    for(i=1;i<=nro;i++){
+        fact = fact * i;
+    }
+    return fact;
+}
+
+int FactorialRecursivo(int nro){
+    if(nro == 1){
+        return 1;
+    }else{
+        return FactorialRecursivo(nro - 1)*nro;
+    }
+}
+
+*/
+
+
+
+
+//EJERCICIO 2
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+double PotenciaDo(int , int );
+double PotenciaWhile(int , int );
+double PotenciaFor(int , int );
+
+int main()
+{
+    int base, exponente;
+    printf("Ingress base: ");
+    scanf("%d",&base);
+    printf("Ingress exponente: ");
+    scanf("%d",&exponente);
+    printf("La potencia es : %lf\n" , PotenciaDo(base,exponente));
+    printf("La potencia es : %lf\n" , PotenciaWhile(base,exponente));
+    printf("La potencia es : %lf\n" , PotenciaFor(base,exponente));
+    return 0;
+}
+
+double PotenciaDo(int base, int exponente){
+    double potencia = 1;
+    int i=1;
+    do{
+        potencia = potencia * base;
+        i++;
+    }
+    while(i<=exponente);
+    return potencia;
+}
+
+double PotenciaWhile(int base, int exponente){
+        double potencia = 1;
+        int i=1;
+        while(i<=exponente){
+            potencia = potencia * base;
+            i++;
+        }
+        return potencia;
+    }
+
+
+
+double PotenciaFor(int base, int exponente){
+    double potencia = 1;
+    int i=1;
+    for(i=1;i<=exponente ;i++){
+        potencia = potencia * base;
+    }
+    return potencia;
+}
