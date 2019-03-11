@@ -1,0 +1,77 @@
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+// POTENCIA POR RECURSIVIDAD
+
+int potencia(int , int );
+
+int main()
+{
+    int base; int exponente;
+    printf("Nro Base : ");
+    scanf("%d",&base);
+    printf("Nro Exponente : ");
+    scanf("%d",&exponente);
+    printf("La potencia de %d con exponente %d es:  %d " ,base, exponente, potencia(base,exponente));
+    return 0;
+}
+
+int potencia(int base, int expo){
+    if(expo == 0)
+        return 1;
+    else
+        return base*potencia(base, (expo-1));
+
+}
+
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+// POTENCIA POR RECURSIVIDAD
+
+int serie(int );
+
+int main()
+{
+    int pos;
+    printf("Mostrar numero de la serie Fibonacci en la posicion : ");
+    scanf("%d", &pos);
+    printf("Numero en la posicion %d : %d " , pos , serie(pos));
+}
+
+int serie(int n){
+    if((n == 1)||(n == 2))
+        return 1;
+    else
+        return (serie(n-1) + serie(n-2));
+}
+
+
+/*
+
+#include <stdio.h>
+//Factorial por recursividad
+long factorial(int numero);
+
+int main()
+{
+    int numero;
+    printf("ingrese el numero:");
+    scanf("%i",&numero);
+    printf("\n el factotrial del numero es %li",factorial(numero));
+    return 0;
+    }
+
+    long factorial(int n ){
+    if(n<=1){
+        return 1;
+    }
+    else {
+      return(n*factorial(n-1));
+    }
+}
+*/
