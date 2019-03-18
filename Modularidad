@@ -121,3 +121,57 @@ double PotenciaFor(int base, int exponente){
     }
     return potencia;
 }
+
+
+
+/*
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+        //Se digita el tamaño del arreglo declarando su variable como numero entero
+        int cant;
+        printf(" Ingrese el tamaño de arreglo  ");
+        scanf("%d",&cant);
+        int serie[cant];
+        int i=0;
+        for( i = 0; i < cant; i++){
+            scanf("%d",&serie[i]);
+        }
+
+        printf("Numero mayor = %d" , mayor(serie,cant));
+        printf("Numero menor = %d" , menor(serie,cant));
+        return 0;
+}
+
+
+int mayor(int serie[], int cant){
+        //Declaracion de la variables auxiliar que almacenara el mayor valor segun comparaciones
+        int auxmayor=0;
+        int i=0;
+        for (i = 0; i < cant; i++) {
+            if(auxmayor < serie[i]){
+                auxmayor = serie[i];
+            }
+        }
+        return auxmayor;
+    }
+
+int menor(int serie[], int cant){
+        //Declaracion de la variables auxiliar que almacenara el mayor valor segun comparaciones
+        int auxmenor=serie[0];
+        int i = 0;
+        for( i = 0; i < cant; i++) {
+            if(auxmenor > serie[i]){
+                auxmenor = serie[i];
+            }
+        }
+        return auxmenor;
+    }
+
+
+*/
