@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n;
+        printf("Numero de discos: \n");
+        scanf("%d", &n);
+        Hanoi(n,1,2,3);  //1:origen  2:auxiliar 3:destino
+    return 0;
+}
+
+void Hanoi(int n, int origen,  int auxiliar, int destino){
+  if(n==1)
+    printf("mover disco de %d a %d \n", origen , destino);
+  else{
+     Hanoi(n-1, origen, destino, auxiliar);
+     printf("mover disco de %d a %d \n" , origen, destino);
+     Hanoi(n-1, auxiliar, origen, destino);
+   }
+ }
