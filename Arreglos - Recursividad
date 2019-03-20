@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+        int cant;
+        printf("Cuantos elementos tiene el arreglo : ");
+        scanf("%d",&cant);
+        int serie[cant];
+
+        printf("Escriba los elementos del arreglo: ");
+        int i;
+        for(i =0; i< cant ;i++){
+            scanf("%d",&serie[i]);
+        }
+
+        printf("La suma es : %d\n" , sumaRecursiva(serie, cant - 1));
+        printf("el promedio es : %d\n" , promRecursiva(serie, cant - 1, cant ));
+    return 0;
+}
+
+
+    int sumaRecursiva(int serie[], int contador){
+         if(contador == 0){
+            return serie[contador];
+        }
+        else{
+            return (serie[contador] + sumaRecursiva(serie, (contador-1)));
+        }
+    }
+
+
+    int promRecursiva(int serie[], int contador, int div){
+
+        if(contador == 0){
+            return (serie[contador]/div);
+        }
+        else{
+            return ((serie[contador]/div) + promRecursiva(serie, (contador-1), div));
+        }
+    }
